@@ -1,0 +1,61 @@
+body{
+    background-color: aqua;
+}
+
+h1{
+    text-align: center;
+    margin-bottom: 25px;
+}
+#calculator{
+    width: 90%;
+    max-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 1.5em;
+    background-color: aquamarine;
+    border: 3px solid white;
+    padding: 50px;
+}
+
+#calculator-screen{
+    background: rgba(0,0,0,.8);
+    color: white;
+    padding: 1rem .5rem;
+    margin-bottom: .25rem;
+    border-radius: .25rem;
+    text-align: right;
+}
+
+#calculator-keys{
+    display: grid;
+    grid-gap: .25rem;
+    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(4, 1fr);
+}
+
+
+button{
+    padding: 15%;
+    font-size: 1em;
+    background-color: rgba(0, 0, 250, .7);
+    color: white;
+}
+
+[data-math=suma],
+[data-math=resta],
+[data-math=multiplicacion],
+[data-math=division],
+[data-operation=igual],
+[data-operation=clear]{
+    background-color: rgba(0, 0, 150, 1);
+}
+
+[data-math=suma],
+[data-operation=igual]{
+    grid-row: span 2;
+}
+
+[data-number='0']{
+    grid-column: span 2;
+}
+
